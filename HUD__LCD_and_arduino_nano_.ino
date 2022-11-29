@@ -90,9 +90,7 @@ tft.print(" Z: ");
 tft.print(euler.z()); 
 tft.println("");
 
-// the line for the artificial horizon
-// divided by 2, because euler angle is 360' and
-// screen has 128 pixel, so the change is the same
+// the line for the artificial horizon divided by 2, because euler angle is 360' and screen has 128 pixel, so the change is the same
 tft.height()/2 + euler.y()/2, ST7735_GREEN); 
 
 // tan(euler.x()/5 this is for minimizing oscilations
@@ -112,14 +110,10 @@ tft.fillScreen(ST7735_BLACK);
 }
 
 void pointer (){
-tft.drawLine(tft.width()/2 - 10 , tft.height()/2 , tft.width()/2 - 5 ,
-tft.height()/2 , ST77XX_RED);
-tft.drawLine(tft.width()/2 , tft.height()/2 - 10 , tft.width()/2 ,
-tft.height()/2 - 5 , ST77XX_RED);
-tft.drawLine(tft.width()/2 + 10 , tft.height()/2 , tft.width()/2 + 5 ,
-tft.height()/2 , ST77XX_RED);
-tft.drawLine(tft.width()/2 , tft.height()/2 + 10 , tft.width()/2 ,
-tft.height()/2 + 5 , ST77XX_RED);
+tft.drawLine(tft.width()/2 - 10 , tft.height()/2 , tft.width()/2 - 5 ,tft.height()/2 , ST77XX_RED);
+tft.drawLine(tft.width()/2 , tft.height()/2 - 10 , tft.width()/2 ,tft.height()/2 - 5 , ST77XX_RED);
+tft.drawLine(tft.width()/2 + 10 , tft.height()/2 , tft.width()/2 + 5 ,tft.height()/2 , ST77XX_RED);
+tft.drawLine(tft.width()/2 , tft.height()/2 + 10 , tft.width()/2 ,tft.height()/2 + 5 , ST77XX_RED);
 }
 
 // function for printing the results from ultrasonic sensor
