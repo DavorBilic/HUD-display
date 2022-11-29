@@ -13,11 +13,9 @@
 
 // Object Declaration. A class exists for each interface option
 #if USE_SPI
-UG2856KLBAG01_SPI myTOLED; // Declare a SPI-based Transparent OLED 
-object called myTOLED
+UG2856KLBAG01_SPI myTOLED; // Declare a SPI-based Transparent OLED object called myTOLED
 #else
-UG2856KLBAG01_I2C myTOLED; // Declare a I2C-based Transparent OLED 
-object called myTOLED
+UG2856KLBAG01_I2C myTOLED; // Declare a I2C-based Transparent OLED object called myTOLED
 #endif /* USE_SPI */
 
 #include <SPI.h>
@@ -47,8 +45,7 @@ Serial.println("Orientation Sensor Test"); Serial.println("");
 if(!bno.begin())
 {
  /* There was a problem detecting the BNO055 ... check your connections */
-Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C 
-ADDR!");
+Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
 while(1);
 }
 
